@@ -1,4 +1,3 @@
-using System.Numerics;
 using UnityEngine;
 using Vector3 = UnityEngine.Vector3;
 
@@ -13,7 +12,7 @@ public class Car : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontalInput = Input.GetAxis("Vertical");
-        transform.Translate(Vector3.forward * horizontalInput * Time.deltaTime * 5);   
+        float verticalInput = Input.GetAxis("Vertical");
+        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * 5);   
     }
 }
