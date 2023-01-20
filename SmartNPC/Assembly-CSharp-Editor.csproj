@@ -41,9 +41,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets/StarterAssets/Editor/StarterAssetsDeployMenu.cs" />
      <Compile Include="Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" />
      <Compile Include="Assets/StarterAssets/Editor/ThirdPersonStarterAssetsDeployMenu.cs" />
-     <Compile Include="Assets/StarterAssets/Editor/StarterAssetsDeployMenu.cs" />
+     <Compile Include="Assets/Editor/NPCBuilder.cs" />
      <None Include="Assets/StarterAssets/Editor/PackageChecker/PackageCheckerSettings.json" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.9f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -300,6 +301,9 @@
      <Reference Include="UnityEditor.OSXStandalone.Extensions">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.9f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
      </Reference>
+     <Reference Include="StarterAssetsPackageChecker">
+     <HintPath>/Users/caiocesarcalisto/Documents/GitHub/MyGames/SmartNPC/Assets/StarterAssets/Editor/PackageChecker/StarterAssetsPackageChecker.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Plastic.Newtonsoft.Json">
      <HintPath>/Users/caiocesarcalisto/Documents/GitHub/MyGames/SmartNPC/Library/PackageCache/com.unity.collab-proxy@1.17.2/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
      </Reference>
@@ -341,9 +345,6 @@
      </Reference>
      <Reference Include="unityplastic">
      <HintPath>/Users/caiocesarcalisto/Documents/GitHub/MyGames/SmartNPC/Library/PackageCache/com.unity.collab-proxy@1.17.2/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
-     </Reference>
-     <Reference Include="StarterAssetsPackageChecker">
-     <HintPath>/Users/caiocesarcalisto/Documents/GitHub/MyGames/SmartNPC/Assets/StarterAssets/Editor/PackageChecker/StarterAssetsPackageChecker.dll</HintPath>
      </Reference>
      <Reference Include="nunit.framework">
      <HintPath>/Users/caiocesarcalisto/Documents/GitHub/MyGames/SmartNPC/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
