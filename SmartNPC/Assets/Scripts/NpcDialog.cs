@@ -7,12 +7,14 @@ public class NpcDialog : MonoBehaviour
     [SerializeField] private GameObject mainCamera;
     [SerializeField] private GameObject toActivate;
     [SerializeField] private Transform standingPoint;
+
+    private Transform avatar;
     
     private async void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Transform avatar = other.transform;
+            avatar = other.transform;
 
             // disable player input
             avatar.GetComponent<PlayerInput>().enabled = false;
@@ -27,9 +29,20 @@ public class NpcDialog : MonoBehaviour
             mainCamera.SetActive(false);
             toActivate.SetActive(true);
             
-            // gpt chat ui
+            // display cursor
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
-    
-    // recover
+
+    public void Recover()
+    {
+        avatar.GetComponent<PlayerInput>().enabled = true;
+
+        mainCamera.SetActive(true);
+        toActivate.SetActive(false);
+            
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked	;
+    }
 }
