@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace OpenAI
@@ -14,6 +15,8 @@ namespace OpenAI
         private string userInput;
         private string Instruction = "Act as a random stranger in a chat room and reply to the questions.\nQ: ";
 
+        public UnityEvent OnReplyReceived;
+        
         private void Start()
         {
             button.onClick.AddListener(SendReply);
@@ -38,6 +41,8 @@ namespace OpenAI
                 MaxTokens = 128
             });
 
+            OnReplyReceived.Invoke();
+            
             textArea.text = completionResponse.Choices[0].Text;
             Instruction += $"{completionResponse.Choices[0].Text}\nQ: ";
 

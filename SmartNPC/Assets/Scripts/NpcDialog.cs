@@ -43,6 +43,6 @@ public class NpcDialog : MonoBehaviour
         toActivate.SetActive(false);
             
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked	;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }

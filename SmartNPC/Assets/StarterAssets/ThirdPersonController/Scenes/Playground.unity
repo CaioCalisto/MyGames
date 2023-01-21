@@ -786,9 +786,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83764466e83f8aa40b421e5af75b1b49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputField: {fileID: 0}
-  button: {fileID: 0}
-  textArea: {fileID: 0}
+  inputField: {fileID: 22229689}
+  button: {fileID: 1104695962}
+  textArea: {fileID: 178274417}
+  OnReplyReceived:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1895869172}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Talk
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &746329221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2164,6 +2179,12 @@ ReflectionProbe:
   m_UseOcclusionCulling: 1
   m_Importance: 1
   m_CustomBakedTexture: {fileID: 0}
+--- !u!95 &1895869172 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6982812146204527121, guid: 64dce48905ffd9b4293e595fa6941544,
+    type: 3}
+  m_PrefabInstance: {fileID: 31536046}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1941540847
 GameObject:
   m_ObjectHideFlags: 0
