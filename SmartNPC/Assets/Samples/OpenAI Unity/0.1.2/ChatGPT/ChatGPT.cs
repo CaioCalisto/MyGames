@@ -16,7 +16,9 @@ namespace OpenAI
         private string Instruction = "Act as a random stranger in a chat room and reply to the questions.\nQ: ";
 
         public UnityEvent OnReplyReceived;
-        
+
+        public UnityEvent OnAnswerSent;
+
         private void Start()
         {
             button.onClick.AddListener(SendReply);
@@ -41,6 +43,7 @@ namespace OpenAI
                 MaxTokens = 128
             });
 
+            // Here we invoke the trigger to animation TALK
             OnReplyReceived.Invoke();
             
             textArea.text = completionResponse.Choices[0].Text;
@@ -48,6 +51,9 @@ namespace OpenAI
 
             button.enabled = true;
             inputField.enabled = true;
+            
+            // Here we return the animation to NORMAl, if we want
+            OnAnswerSent.Invoke();
         }
     }
 }
