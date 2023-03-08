@@ -2,10 +2,10 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class NpcDialog : MonoBehaviour
+public class OnNpcDialogTriggered : MonoBehaviour
 {
     [SerializeField] private GameObject mainCamera;
-    [SerializeField] private GameObject toActivate;
+    [SerializeField] private GameObject chatGptDialog;
     [SerializeField] private Transform standingPoint;
 
     private Transform avatar;
@@ -27,7 +27,7 @@ public class NpcDialog : MonoBehaviour
             
             // disable main camera, enable dialog camera
             mainCamera.SetActive(false);
-            toActivate.SetActive(true);
+            chatGptDialog.SetActive(true);
             
             // display cursor
             Cursor.visible = true;
@@ -40,7 +40,7 @@ public class NpcDialog : MonoBehaviour
         avatar.GetComponent<PlayerInput>().enabled = true;
 
         mainCamera.SetActive(true);
-        toActivate.SetActive(false);
+        chatGptDialog.SetActive(false);
             
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;

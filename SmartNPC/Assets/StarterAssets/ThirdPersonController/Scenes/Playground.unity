@@ -1882,7 +1882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 771498162}
-  toActivate: {fileID: 1719290232}
+  chatGptDialog: {fileID: 1719290232}
   standingPoint: {fileID: 1576690044}
 --- !u!65 &1261338927
 BoxCollider:
@@ -2012,7 +2012,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1719290233}
   m_Layer: 0
-  m_Name: ToActivate
+  m_Name: ChatGPTDialog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
