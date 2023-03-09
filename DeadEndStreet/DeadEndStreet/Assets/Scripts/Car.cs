@@ -13,6 +13,11 @@ public class Car : MonoBehaviour
     void Update()
     {
         float verticalInput = Input.GetAxis("Vertical");
-        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * 5);   
+        MoveForward(verticalInput);
+    }
+
+    public void MoveForward(float verticalInput)
+    {
+        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * 5);
     }
 }
